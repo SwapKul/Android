@@ -2,8 +2,16 @@ package com.example.asus.interactivitydemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void clickFunction(View view){
+
+        Log.i("Info", "It Worked!");
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
