@@ -1,6 +1,6 @@
-import java.util.Arrays;
+import java.util.*;
 
-public class loops {
+public class Loops {
 
     public static void main (String[] args) {
 
@@ -36,6 +36,25 @@ public class loops {
 
         String[] names = {"Rob", "Jose", "Rolf", "Anne"};
         System.out.println(Arrays.toString(names));
+
+        for (String name : names){ // this is foreach loop
+
+            System.out.println(name);
+
+        }
+
+        List<String> familyMembers = new ArrayList<>();
+
+        familyMembers.add("Rob");
+        familyMembers.add("Rolf");
+        familyMembers.add("Anne");
+        familyMembers.add("Jake");
+
+        for (String Name : familyMembers) { // this is foreach loop
+
+            System.out.println(Name);
+
+        }
 
     }
 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Array {
+public class Array_and_lists {
 
     public static void main (String[] args) {
 
