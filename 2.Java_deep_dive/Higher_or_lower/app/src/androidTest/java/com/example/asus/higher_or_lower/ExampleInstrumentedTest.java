@@ -1,4 +1,4 @@
-package com.example.asus.higherorlower;
+package com.example.asus.higher_or_lower;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.asus.higherorlower", appContext.getPackageName());
+        assertEquals("com.example.asus.higher_or_lower", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.asus.higherorlower;
+package com.example.asus.higher_or_lower;
 
 import org.junit.Test;
 
