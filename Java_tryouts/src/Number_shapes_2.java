@@ -1,4 +1,4 @@
-public class Number_shapes {
+public class Number_shapes_2 {
 
     public static void main (String[] args) {
 
@@ -8,18 +8,23 @@ public class Number_shapes {
 
             public boolean triangleNumber(){
 
-                int x = 1;
-
                 int triangleNumber = 1;
 
-                while (triangleNumber < num) {
+                for (int i = 1; i < num; i++){
 
-                    x++;
-                    triangleNumber = triangleNumber + x;
+                    i = triangleNumber + i;
 
                 }
 
-                return triangleNumber == num;
+                if (triangleNumber == num){
+
+                    return true;
+
+                } else {
+
+                    return false;
+
+                }
 
             }
 

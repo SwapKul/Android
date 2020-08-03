@@ -22,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
             if (ex == numberInteger) {
                 Log.i("number", Integer.toString(ex));
                 Toast.makeText(this, "It is a Triangle number.", Toast.LENGTH_SHORT).show();
-            }/* else {
+            } else {
                 Log.i("result","This number is not a triangle number.");
-            }*/
+                Toast.makeText(this, "It is a not Triangle number.", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
