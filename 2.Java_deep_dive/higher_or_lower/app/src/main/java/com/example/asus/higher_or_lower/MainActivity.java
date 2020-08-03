@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void generateRandomNumber () {
 
-        random = new Random().nextInt(21) + 1;
+        random = new Random().nextInt(20) + 1;
 
     }
 
