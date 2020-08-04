@@ -6,7 +6,7 @@ public class Number_shapes {
 
             int num;
 
-            public boolean triangleNumber(){
+            public boolean triangularNumber(){
 
                 int x = 1;
 
@@ -23,12 +23,20 @@ public class Number_shapes {
 
             }
 
+            public boolean squareNumber () {
+
+                double squareRoot = Math.sqrt(num);
+
+                return squareRoot % 1 == 0; // or we could use return squareRoot == Math.floor(squareRoot)
+
+            }
 
         }
 
         Number z = new Number();
-        z.num = 6;
-        System.out.println(z.triangleNumber());
+        z.num = 625;
+        System.out.println(z.squareNumber());
+
 
     }
 
