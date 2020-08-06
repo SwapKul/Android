@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView bartImage = findViewById(R.id.bartImage);
 
-        ImageView image2 = findViewById(R.id.homerImage);
+        //ImageView image2 = findViewById(R.id.homerImage);
 
         bartImage.animate().alpha(1).translationX(500).rotation(1800).setDuration(2000);
 

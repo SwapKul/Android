@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
             bartIsShowing = false;
 
-            image.animate().alpha(0).setDuration(2000);  //alpha sets the solid property of an object
+            image.animate().alpha(0).setDuration(1500);  //alpha sets the solid property of an object
 
-            image2.animate().alpha(1).setDuration(2000);
+            image2.animate().alpha(1).setDuration(1500);
         } else {
 
             bartIsShowing = true;
 
-            image.animate().alpha(1).setDuration(2000);  //alpha sets the solid property of an object
+            image.animate().alpha(1).setDuration(1500);  //alpha sets the solid property of an object
 
-            image2.animate().alpha(0).setDuration(2000);
+            image2.animate().alpha(0).setDuration(1500);
         }
     }
 
