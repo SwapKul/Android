@@ -25,6 +25,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:onClick="playPhrase"
             android:tag="goodmorning"
             android:text="Good Morning" />
 
@@ -33,56 +34,63 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_rowWeight="1"
+            android:onClick="playPhrase"
             android:tag="thankyou"
-            android:text="Thank you" />
+            android:text="Thank you very\n much" />
 
         <Button
             android:id="@+id/button3"
-            android:text="Goodbye"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
             android:tag="goodbye"
-            android:layout_rowWeight="1"/>
+            android:text="Goodbye" />
 
         <Button
             android:id="@+id/button4"
-            android:text="Hi/Bye"
-            android:tag="hi"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
+            android:tag="hibye"
+            android:text="Hi/Bye" />
 
         <Button
             android:id="@+id/button5"
-            android:text="I am sorry"
-            android:tag="sorry"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
+            android:tag="iamsorry"
+            android:text="I am sorry" />
 
         <Button
             android:id="@+id/button6"
-            android:text="Pardon Me"
-            android:tag="pardon"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
+            android:tag="pardonme"
+            android:text="Pardon Me" />
 
         <Button
             android:id="@+id/button7"
-            android:text="Please"
-            android:tag="please"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
+            android:tag="please"
+            android:text="Please" />
 
         <Button
             android:id="@+id/button8"
-            android:text="See you later"
-            android:tag="seeyoulater"
-            android:layout_gravity="fill"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:onClick="playPhrase"
+            android:tag="seeyoulater"
+            android:text="See you later" />
 
     </GridLayout>
 </android.support.constraint.ConstraintLayout>
