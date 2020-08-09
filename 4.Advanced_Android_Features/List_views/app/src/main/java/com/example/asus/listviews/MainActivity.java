@@ -3,6 +3,9 @@ package com.example.asus.listviews;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,15 +19,28 @@ public class MainActivity extends AppCompatActivity {
 
         ListView myListView = findViewById(R.id.myListView);
 
-        ArrayList<String> family = new ArrayList<String>();
+        final ArrayList<String> myFamily = new ArrayList<>();
 
-        family.add("Avnish");
+        myFamily.add("Avnish");
 
-        family.add("Tripti");
+        myFamily.add("Tripti");
 
-        family.add("Tushar");
+        myFamily.add("Tushar");
 
-        family.add("Swapnil");
+        myFamily.add("Swapnil");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myFamily);
+
+        myListView.setAdapter(arrayAdapter);
+
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //adapterView.setVisibility(View.GONE); it makes the whole view disappear
+                //view.setVisibility(View.GONE); it makes just the tapped view disappear
+                Log.i("Person tapped", myFamily.get(i));
+            }
+        });
 
     }
 }
