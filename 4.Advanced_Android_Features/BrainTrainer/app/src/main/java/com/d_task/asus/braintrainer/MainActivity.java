@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         playAgain.setVisibility(View.INVISIBLE);
         result.setVisibility(View.INVISIBLE);
 
+        option1.setEnabled(true);
+        option2.setEnabled(true);
+        option3.setEnabled(true);
+        option4.setEnabled(true);
+
         new CountDownTimer(30100, 1000) {
 
             @SuppressLint("SetTextI18n")
