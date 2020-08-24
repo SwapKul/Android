@@ -2,6 +2,7 @@ package com.d_task.asus.braintrainer;
 
 import android.annotation.SuppressLint;
 import android.os.CountDownTimer;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,12 +28,50 @@ public class MainActivity extends AppCompatActivity {
     Button option3;
     Button option4;
     TextView timer;
+    Button playAgain;
+    ConstraintLayout mainGame;
+
+
+    @SuppressLint("SetTextI18n")
+    public void playAgain(View view) {
+
+        score = 0;
+        numberOfQuestions = 0;
+        timer.setText("30s");
+        scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+
+        newQuestion();
+        playAgain.setVisibility(View.INVISIBLE);
+        result.setVisibility(View.INVISIBLE);
+
+        new CountDownTimer(30100, 1000) {
+
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onTick(long l) {
+                timer.setText(String.valueOf((l/1000)) + "s");
+            }
+
+            @SuppressLint("SetTextI18n")
+            @Override
+
+            public void onFinish() {
+                result.setText("Done!");
+                playAgain.setVisibility(View.VISIBLE);
+                option1.setEnabled(false);
+                option2.setEnabled(false);
+                option3.setEnabled(false);
+                option4.setEnabled(false);
+            }
+        }.start();
+    }
 
     public void startFunction(View view) {
 
         Log.i("Info", "Questionnaire Started");
         goButton.setVisibility(View.INVISIBLE);
-
+        playAgain(findViewById(R.id.timerTextView));
+        mainGame.setVisibility(View.VISIBLE);
     }
 
     @SuppressLint("SetTextI18n")
@@ -40,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Tag:",view.getTag().toString());
 
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
+            result.setVisibility(View.VISIBLE);
             result.setText("CORRECT!");
             score++;
         } else {
@@ -85,9 +125,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setVisibility(){
-
-    }
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -99,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
         result.setText("Let's start");
         scoreTextView = findViewById(R.id.scoreTextView);
         timer = findViewById(R.id.timerTextView);
+        playAgain = findViewById(R.id.playAgainButton);
+        mainGame = findViewById(R.id.mainGame);
 
         sumTextView = findViewById(R.id.sumTextView);
         option1 = findViewById(R.id.option1);
@@ -107,21 +146,8 @@ public class MainActivity extends AppCompatActivity {
         option4 = findViewById(R.id.option4);
 
         goButton = findViewById(R.id.goButton);
-
-        newQuestion();
-
-        new CountDownTimer(30100, 1000) {
-
-            @Override
-            public void onTick(long l) {
-                timer.setText(String.valueOf((l/1000)) + "s");
-            }
-
-            @Override
-            public void onFinish() {
-                result.setText("Done!");
-            }
-        }.start();
+        goButton.setVisibility(View.VISIBLE);
+        mainGame.setVisibility(View.INVISIBLE);
 
     }
 }
